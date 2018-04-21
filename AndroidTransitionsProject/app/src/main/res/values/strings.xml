@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidTransitions</string>
     <string name="scene_demo_title">Application</string>
+    <string name="enter">Enter</string>
 </resources>

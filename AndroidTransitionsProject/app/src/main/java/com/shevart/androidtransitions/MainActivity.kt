@@ -3,7 +3,8 @@ package com.shevart.androidtransitions
 import android.content.Intent
 import android.os.Bundle
 import com.shevart.androidtransitions.base.AbsActivity
-import com.shevart.androidtransitions.scene.sample.SceneSampleActivity
+import com.shevart.androidtransitions.scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity
+import com.shevart.androidtransitions.scene.samples.searchbar.SearchBarSceneSampleActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AbsActivity() {
@@ -13,7 +14,8 @@ class MainActivity : AbsActivity() {
         setContentView(R.layout.activity_main)
 
         btScene.setOnClickListener {
-            startActivity(Intent(this, SceneSampleActivity::class.java))
+            startActivity(Intent(this, SearchBarSceneSampleActivity::class.java))
+            startActivity(Intent(this, ContentByLayoutIdSceneSampleActivity::class.java))
         }
     }
 }
