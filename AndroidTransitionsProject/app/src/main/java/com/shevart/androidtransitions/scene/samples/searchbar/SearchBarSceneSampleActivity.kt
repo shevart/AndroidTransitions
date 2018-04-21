@@ -38,14 +38,10 @@ class SearchBarSceneSampleActivity : AbsActivity() {
         startTransition.addTransition(slide)
         startTransition.addTransition(Slide(Gravity.START).addTarget(R.id.ivMenu))
 
-//        startTransition.addTransition(Fade()) // .addTarget(R.id.tvTitle)
-
         TransitionManager.go(sceneFirst, startTransition)
 
         sceneFirst.sceneRoot.findViewById<ImageView>(R.id.ivMenu).setOnClickListener {
             TransitionManager.go(sceneSecond, startTransition)
         }
-
-//        sceneSecond.sceneRoot.findViewById<ImageView>(R.id.)
     }
 }

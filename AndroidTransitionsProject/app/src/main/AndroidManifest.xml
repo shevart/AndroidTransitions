@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,8 @@
         <activity
             android:name=".scene.samples.searchbar.SearchBarSceneSampleActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity"></activity>
+        <activity android:name=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity" />
+        <activity android:name=".scene.samples.enterexitaction.EnterAndExitActionSceneSampleActivity"></activity>
     </application>
 
 </manifest>

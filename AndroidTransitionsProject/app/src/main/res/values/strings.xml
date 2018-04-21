@@ -7,4 +7,8 @@
     <string name="sea">Sea</string>
     <string name="enter_no_anim">Enter no anim</string>
     <string name="enter_custom_anim">Enter custom anim</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="repeat_password">Повторите пароль!</string>
 </resources>

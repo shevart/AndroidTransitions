@@ -15,12 +15,8 @@ class ContentByLayoutIdSceneSampleActivity : AbsActivity() {
 
         scene = Scene.getSceneForLayout(rootView, R.layout.layout_scene_sample_content_by_layout_id, this)
 
-        ivBack.setOnClickListener {
-            finish()
-        }
-        ivClearContent.setOnClickListener {
-            rootView.removeAllViews()
-        }
+        ivBack.setOnClickListener { finish() }
+        ivClearContent.setOnClickListener { rootView.removeAllViews() }
 
         btEnterNoAnim.setOnClickListener {
             scene.enter()
@@ -33,7 +29,7 @@ class ContentByLayoutIdSceneSampleActivity : AbsActivity() {
             val textSlideTransition = Slide().addTarget(R.id.tvSea)
 
             val customAnimTransition = TransitionSet().apply {
-                duration = 1000L
+                duration = 1000L // 1 sec
                 addTransition(imageFadeTransition)
                 addTransition(textSlideTransition)
             }
