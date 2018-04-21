@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">AndroidTransitions</string>
     <string name="scene_demo_title">Application</string>
-    <string name="enter">Enter</string>
+    <string name="enter_def_anim">Enter default anim</string>
+    <string name="hello">Hello</string>
+    <string name="click_me">Click me!</string>
+    <string name="sea">Sea</string>
+    <string name="enter_no_anim">Enter no anim</string>
+    <string name="enter_custom_anim">Enter custom anim</string>
 </resources>

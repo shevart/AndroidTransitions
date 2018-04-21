@@ -8,20 +8,35 @@
     tools:context=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity">
 
     <Button
-        android:id="@+id/btSceneByLayoutIdEnter"
-        style="@style/TextButton"
+        android:id="@+id/btEnterDefAnim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/enter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/enter_def_anim"
+        android:theme="@style/TextButton"
+        app:layout_constraintStart_toStartOf="@+id/btEnterNoAnim"
+        app:layout_constraintTop_toBottomOf="@+id/btEnterNoAnim" />
+
+    <Button
+        android:id="@+id/btEnterNoAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/enter_no_anim"
+        android:theme="@style/TextButton"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/btEnterCustomAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_custom_anim"
+        android:theme="@style/TextButton"
+        app:layout_constraintStart_toStartOf="@+id/btEnterDefAnim"
+        app:layout_constraintTop_toBottomOf="@+id/btEnterDefAnim" />
 
     <ImageView
-        android:id="@+id/ibBack"
+        android:id="@+id/ivBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,25 +49,33 @@
         app:srcCompat="@drawable/ic_arrow_back" />
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="320dp"
         android:layout_height="320dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        app:cardElevation="1.5dp"
         app:cardCornerRadius="4dp"
-        app:cardUseCompatPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/btSceneByLayoutIdEnter"
+        app:cardElevation="1.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibBack"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/ivBack">
 
         <FrameLayout
             android:id="@+id/rootView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            tools:visibility="gone" />
 
     </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivClearContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:srcCompat="@drawable/ic_close" />
 </android.support.constraint.ConstraintLayout>
