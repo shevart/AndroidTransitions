@@ -17,6 +17,7 @@ class EnterAndExitActionSceneSampleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_and_exit_action_scene_sample)
+        ivBack.setOnClickListener { finish() }
 
         logoScene = Scene(rootView)
         logoScene.setEnterAction { logoLayout.visibility = View.VISIBLE }

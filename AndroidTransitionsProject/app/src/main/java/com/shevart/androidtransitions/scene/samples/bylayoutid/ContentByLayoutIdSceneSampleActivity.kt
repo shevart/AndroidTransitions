@@ -13,10 +13,10 @@ class ContentByLayoutIdSceneSampleActivity : AbsActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content_by_layout_id_scene_sample)
 
-        scene = Scene.getSceneForLayout(rootView, R.layout.layout_scene_sample_content_by_layout_id, this)
-
         ivBack.setOnClickListener { finish() }
-        ivClearContent.setOnClickListener { rootView.removeAllViews() }
+        ivClearContent.setOnClickListener { cardView.removeAllViews() }
+
+        val scene = Scene.getSceneForLayout(cardView, R.layout.layout_scene_sample_content_by_layout_id, this)
 
         btEnterNoAnim.setOnClickListener {
             scene.enter()

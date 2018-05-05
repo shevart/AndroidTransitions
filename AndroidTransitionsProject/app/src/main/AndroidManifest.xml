@@ -24,8 +24,18 @@
         <activity
             android:name=".scene.samples.searchbar.SearchBarSceneSampleActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity" />
-        <activity android:name=".scene.samples.enterexitaction.EnterAndExitActionSceneSampleActivity"></activity>
+        <activity
+            android:name=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scene.samples.enterexitaction.EnterAndExitActionSceneSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transition.TransitionTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transition.overview.TransitionsOverviewComplexLayoutActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

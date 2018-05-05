@@ -10,5 +10,11 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="repeat_password">Повторите пароль!</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="the_same_view">The same view</string>
+    <string name="transition_overview">Transition Overview</string>
+    <string name="scene_a">Scene A</string>
+    <string name="scene_b">Scene B</string>
+    <string name="scenea_view_only">SceneA view only</string>
+    <string name="sceneb_view_only">SceneB view only</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
+    android:background="@android:color/black"
     tools:context=".scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity">
 
     <Button
@@ -59,15 +59,7 @@
         app:cardElevation="1.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivBack">
-
-        <FrameLayout
-            android:id="@+id/rootView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:visibility="gone" />
-
-    </android.support.v7.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
 
     <ImageView
         android:id="@+id/ivClearContent"
