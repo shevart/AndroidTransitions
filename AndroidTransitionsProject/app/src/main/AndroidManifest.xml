@@ -36,6 +36,7 @@
         <activity
             android:name=".transition.overview.TransitionsOverviewComplexLayoutActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".transition.overview.base.ChangeBoundsOverviewActivity"></activity>
     </application>
 
 </manifest>

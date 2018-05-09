@@ -37,8 +37,12 @@ class TransitionsOverviewComplexLayoutActivity : AbsActivity() {
 
     private fun getCurrentTransition() = TransitionSet().apply {
         val changeBound = ChangeBounds()
-        changeBound.resizeClip = false
         addTransition(changeBound)
+
+//        val changeClipBound = ChangeClipBounds()
+//        addTransition(changeClipBound)
+
+        addTransition(ChangeTransform())
 
         // Slide
 //        addTransition(Slide()) // whole layout

@@ -17,4 +17,5 @@
     <string name="scene_b">Scene B</string>
     <string name="scenea_view_only">SceneA view only</string>
     <string name="sceneb_view_only">SceneB view only</string>
+    <string name="change_bounds">ChangeBounds</string>
 </resources>
