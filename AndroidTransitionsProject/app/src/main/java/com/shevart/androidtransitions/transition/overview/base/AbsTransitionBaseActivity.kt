@@ -43,14 +43,16 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
         btSceneB.setOnClickListener {
             TransitionManager.go(sceneB, provideTransition().setBaseParams())
         }
+
+        sceneA.enter()
     }
 
     private fun Transition.setBaseParams(): Transition {
-        duration = TWO_SECONDS
+        duration = DURATION
         return this
     }
 
     companion object {
-        private const val TWO_SECONDS = 2000L
+        private const val DURATION = 1000L
     }
 }

@@ -8,6 +8,8 @@ import com.shevart.androidtransitions.scene.samples.enterexitaction.EnterAndExit
 import com.shevart.androidtransitions.scene.samples.searchbar.SearchBarSceneSampleActivity
 import com.shevart.androidtransitions.transition.overview.TransitionsOverviewComplexLayoutActivity
 import com.shevart.androidtransitions.transition.overview.base.ChangeBoundsOverviewActivity
+import com.shevart.androidtransitions.transition.overview.base.FadeOverviewActivity
+import com.shevart.androidtransitions.transition.overview.base.SlideOverviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AbsActivity() {
@@ -24,7 +26,8 @@ class MainActivity : AbsActivity() {
 
         btTransition.setOnClickListener {
             startActivity(Intent(this, TransitionsOverviewComplexLayoutActivity::class.java))
-            startActivity(Intent(this, ChangeBoundsOverviewActivity::class.java))
+            startActivity(Intent(this, FadeOverviewActivity::class.java))
+            startActivity(Intent(this, SlideOverviewActivity::class.java))
         }
     }
 }

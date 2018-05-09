@@ -18,4 +18,6 @@
     <string name="scenea_view_only">SceneA view only</string>
     <string name="sceneb_view_only">SceneB view only</string>
     <string name="change_bounds">ChangeBounds</string>
+    <string name="fade">Fade</string>
+    <string name="slide">Slide</string>
 </resources>
