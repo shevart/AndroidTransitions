@@ -29,7 +29,7 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
 
     @LayoutRes
     protected open fun provideLayoutIdSceneB(): Int = R.layout.layout_transition_base_overview_scene_b
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transition_base_overview)
