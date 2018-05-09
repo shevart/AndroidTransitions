@@ -2,10 +2,7 @@ package com.shevart.androidtransitions
 
 import android.app.Activity
 import android.content.Intent
-import com.shevart.androidtransitions.transition.overview.base.ChangeBoundsOverviewActivity
-import com.shevart.androidtransitions.transition.overview.base.ExplodeOverviewActivity
-import com.shevart.androidtransitions.transition.overview.base.FadeOverviewActivity
-import com.shevart.androidtransitions.transition.overview.base.SlideOverviewActivity
+import com.shevart.androidtransitions.transition.overview.base.*
 
 object Launcher {
     fun fadeTransitionOverview(activity: Activity) {
@@ -22,5 +19,9 @@ object Launcher {
 
     fun explodeBoundsTransitionOverview(activity: Activity) {
         activity.startActivity(Intent(activity, ExplodeOverviewActivity::class.java))
+    }
+
+    fun changeBoundsArcMotionOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeBoundsWithPathMotionOverviewActivity::class.java))
     }
 }

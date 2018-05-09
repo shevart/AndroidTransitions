@@ -21,4 +21,5 @@
     <string name="fade">Fade</string>
     <string name="slide">Slide</string>
     <string name="explode">Explode</string>
+    <string name="change_bounds_plus_arc_motion">ChangeBounds + ArcMotion</string>
 </resources>
