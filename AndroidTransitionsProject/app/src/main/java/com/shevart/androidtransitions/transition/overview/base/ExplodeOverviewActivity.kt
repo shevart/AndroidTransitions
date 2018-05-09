@@ -5,9 +5,10 @@ import android.support.transition.Explode
 import android.support.transition.Transition
 import android.support.transition.TransitionSet
 import android.view.View
+import android.widget.FrameLayout
 import com.shevart.androidtransitions.R
 
-@Suppress("FoldInitializerAndIfToElvis", "unused")
+@Suppress("FoldInitializerAndIfToElvis", "unused", "ConstantConditionIf")
 class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideIcon() = R.drawable.explode
 
@@ -24,6 +25,13 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     private fun getExplodeForWholeLayout() = Explode()
 
     private fun getExplodeForEveryChildView() = TransitionSet().apply {
+        // smart way
+        addTransition(Explode().addTarget(FrameLayout::class.java))
+
+        // we won't use no smart ways!
+        if (true)return@apply
+
+        // no smart way)
         addTransition(Explode().addTarget(R.id.frameLayout))
         addTransition(Explode().addTarget(R.id.frameLayout2))
         addTransition(Explode().addTarget(R.id.frameLayout3))
@@ -37,6 +45,13 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
 
     private fun getExplodeForEveryChildViewWithEpicenterCallback() = TransitionSet().apply {
         val epicenterCallback = createEpicenterCallback()
+        // smart way
+        addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(FrameLayout::class.java))
+
+        // we won't use no smart ways!
+        if (true)return@apply
+
+        // no smart way)
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout))
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout2))
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout3))
