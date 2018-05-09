@@ -38,7 +38,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".transition.overview.base.ChangeBoundsOverviewActivity" />
         <activity android:name=".transition.overview.base.FadeOverviewActivity" />
-        <activity android:name=".transition.overview.base.SlideOverviewActivity"></activity>
+        <activity android:name=".transition.overview.base.SlideOverviewActivity" />
+        <activity android:name=".transition.overview.base.ExplodeOverviewActivity"></activity>
     </application>
 
 </manifest>

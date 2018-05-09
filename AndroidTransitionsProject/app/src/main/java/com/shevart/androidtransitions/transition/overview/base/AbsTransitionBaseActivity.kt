@@ -2,6 +2,7 @@ package com.shevart.androidtransitions.transition.overview.base
 
 import android.os.Bundle
 import android.support.annotation.DrawableRes
+import android.support.annotation.LayoutRes
 import android.support.transition.Scene
 import android.support.transition.Transition
 import android.support.transition.TransitionManager
@@ -23,7 +24,12 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
 
     abstract fun provideTransition(): Transition
 
+    @LayoutRes
+    protected open fun provideLayoutIdSceneA(): Int = R.layout.layout_transition_base_overview_scene_a
 
+    @LayoutRes
+    protected open fun provideLayoutIdSceneB(): Int = R.layout.layout_transition_base_overview_scene_b
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transition_base_overview)
@@ -32,10 +38,8 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
         tvBaseTransitionTitle.text = provideTitle()
         ivBaseTransitionLogo.setImageResource(provideIcon())
 
-        sceneA = Scene.getSceneForLayout(flSceneConteiner,
-                R.layout.layout_transition_base_overview_scene_a, this)
-        sceneB = Scene.getSceneForLayout(flSceneConteiner,
-                R.layout.layout_transition_base_overview_scene_b, this)
+        sceneA = Scene.getSceneForLayout(flSceneConteiner, provideLayoutIdSceneA(), this)
+        sceneB = Scene.getSceneForLayout(flSceneConteiner, provideLayoutIdSceneB(), this)
 
         btSceneA.setOnClickListener {
             TransitionManager.go(sceneA, provideTransition().setBaseParams())

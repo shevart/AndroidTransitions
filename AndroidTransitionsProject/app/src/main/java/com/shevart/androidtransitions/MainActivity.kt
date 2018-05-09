@@ -25,9 +25,10 @@ class MainActivity : AbsActivity() {
         }
 
         btTransition.setOnClickListener {
-            startActivity(Intent(this, TransitionsOverviewComplexLayoutActivity::class.java))
-            startActivity(Intent(this, FadeOverviewActivity::class.java))
-            startActivity(Intent(this, SlideOverviewActivity::class.java))
+            Launcher.explodeBoundsTransitionOverview(this)
+            Launcher.fadeTransitionOverview(this)
+            Launcher.changeBoundsTransitionOverview(this)
+            Launcher.slideBoundsTransitionOverview(this)
         }
     }
 }

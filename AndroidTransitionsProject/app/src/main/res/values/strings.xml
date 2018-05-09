@@ -20,4 +20,5 @@
     <string name="change_bounds">ChangeBounds</string>
     <string name="fade">Fade</string>
     <string name="slide">Slide</string>
+    <string name="explode">Explode</string>
 </resources>
