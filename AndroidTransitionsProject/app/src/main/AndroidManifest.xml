@@ -41,7 +41,8 @@
         <activity android:name=".transition.overview.base.SlideOverviewActivity" />
         <activity android:name=".transition.overview.base.ExplodeOverviewActivity" />
         <activity android:name=".transition.overview.base.ChangeBoundsArcMotionOverviewActivity" />
-        <activity android:name=".transition.overview.base.ChangeBoundsPatternMotionOverviewActivity"></activity>
+        <activity android:name=".transition.overview.base.ChangeBoundsPatternMotionOverviewActivity" />
+        <activity android:name=".transition.overview.base.ChangeTransformOverviewActivity"></activity>
     </application>
 
 </manifest>

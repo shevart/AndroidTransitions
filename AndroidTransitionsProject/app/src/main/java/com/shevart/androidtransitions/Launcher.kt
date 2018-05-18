@@ -28,4 +28,8 @@ object Launcher {
     fun changeBoundsPatternPathMotionOverview(activity: Activity) {
         activity.startActivity(Intent(activity, ChangeBoundsPatternMotionOverviewActivity::class.java))
     }
+
+    fun changeTransformOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeTransformOverviewActivity::class.java))
+    }
 }

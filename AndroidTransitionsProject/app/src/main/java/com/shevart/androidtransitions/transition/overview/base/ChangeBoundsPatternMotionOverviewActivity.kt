@@ -33,8 +33,8 @@ class ChangeBoundsPatternMotionOverviewActivity : AbsTransitionBaseActivity() {
      */
     private fun createPath() = Path().apply {
         moveTo(0f,0f)
-        quadTo(0f,0f, 1f, 0.3f)
-        quadTo(1f,0.3f, 0.3f, 0.6f)
+        quadTo(0f,0f, 1f, 0.0f)
+        quadTo(1f,0.0f, 0.3f, 0.6f)
         quadTo(0.3f,0.6f, 1f, 1f)
     }
 }
