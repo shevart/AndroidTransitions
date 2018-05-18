@@ -22,7 +22,8 @@ class MainActivity : AbsActivity() {
 
         btTransition.setOnClickListener {
             Launcher.explodeBoundsTransitionOverview(this)
-            Launcher.changeBoundsArcMotionOverview(this)
+//            Launcher.changeBoundsArcMotionOverview(this)
+            Launcher.changeBoundsPatternPathMotionOverview(this)
 //            Launcher.fadeTransitionOverview(this)
 //            Launcher.changeBoundsTransitionOverview(this)
 //            Launcher.slideBoundsTransitionOverview(this)

@@ -22,6 +22,10 @@ object Launcher {
     }
 
     fun changeBoundsArcMotionOverview(activity: Activity) {
-        activity.startActivity(Intent(activity, ChangeBoundsWithPathMotionOverviewActivity::class.java))
+        activity.startActivity(Intent(activity, ChangeBoundsArcMotionOverviewActivity::class.java))
+    }
+
+    fun changeBoundsPatternPathMotionOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeBoundsPatternMotionOverviewActivity::class.java))
     }
 }
