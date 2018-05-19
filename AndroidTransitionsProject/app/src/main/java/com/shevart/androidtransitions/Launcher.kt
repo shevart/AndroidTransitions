@@ -36,4 +36,8 @@ object Launcher {
     fun changeImageTransformOverview(activity: Activity) {
         activity.startActivity(Intent(activity, ChangeImageTransformActivity::class.java))
     }
+
+    fun changeScrollOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeScrollActivity::class.java))
+    }
 }

@@ -24,11 +24,19 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
 
     abstract fun provideTransition(): Transition
 
+    protected fun provideRootView() = flSceneConteiner
+
     @LayoutRes
     protected open fun provideLayoutIdSceneA(): Int = R.layout.layout_transition_base_overview_scene_a
 
     @LayoutRes
     protected open fun provideLayoutIdSceneB(): Int = R.layout.layout_transition_base_overview_scene_b
+
+    protected open fun provideSceneA() =
+            Scene.getSceneForLayout(provideRootView(), provideLayoutIdSceneA(), this)
+
+    protected open fun provideSceneB() =
+            Scene.getSceneForLayout(provideRootView(), provideLayoutIdSceneB(), this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +46,8 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
         tvBaseTransitionTitle.text = provideTitle()
         ivBaseTransitionLogo.setImageResource(provideIcon())
 
-        sceneA = Scene.getSceneForLayout(flSceneConteiner, provideLayoutIdSceneA(), this)
-        sceneB = Scene.getSceneForLayout(flSceneConteiner, provideLayoutIdSceneB(), this)
+        sceneA = provideSceneA()
+        sceneB = provideSceneB()
 
         btSceneA.setOnClickListener {
             TransitionManager.go(sceneA, provideTransition().setBaseParams())
