@@ -27,6 +27,7 @@ class MainActivity : AbsActivity() {
             Launcher.changeImageTransformOverview(this)
             Launcher.changeScrollOverview(this)
             Launcher.autoTransitionOverview(this)
+            Launcher.changeClipBoundsOverview(this)
 //            Launcher.fadeTransitionOverview(this)
 //            Launcher.changeBoundsTransitionOverview(this)
 //            Launcher.slideBoundsTransitionOverview(this)

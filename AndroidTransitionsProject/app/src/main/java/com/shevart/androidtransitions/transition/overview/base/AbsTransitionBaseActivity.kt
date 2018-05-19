@@ -24,7 +24,7 @@ abstract class AbsTransitionBaseActivity : AbsActivity() {
 
     abstract fun provideTransition(): Transition
 
-    protected fun provideRootView() = flSceneConteiner
+    protected fun provideRootView() = flSceneConteiner!!
 
     @LayoutRes
     protected open fun provideLayoutIdSceneA(): Int = R.layout.layout_transition_base_overview_scene_a

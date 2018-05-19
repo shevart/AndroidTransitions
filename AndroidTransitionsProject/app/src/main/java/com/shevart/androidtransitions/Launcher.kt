@@ -41,6 +41,10 @@ object Launcher {
         activity.startActivity(Intent(activity, ChangeScrollOverviewActivity::class.java))
     }
 
+    fun changeClipBoundsOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeClipBoundsActivity::class.java))
+    }
+
     fun autoTransitionOverview(activity: Activity) {
         activity.startActivity(Intent(activity, AutoTransitionOverviewActivity::class.java))
     }

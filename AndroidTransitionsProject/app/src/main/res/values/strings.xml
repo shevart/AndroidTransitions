@@ -27,4 +27,5 @@
     <string name="change_image_transform">ChangeImageTransform</string>
     <string name="change_scroll">ChangeScroll</string>
     <string name="auto_transition">AutoTransition</string>
+    <string name="change_clip_bounds">ChangeClipBounds</string>
 </resources>
