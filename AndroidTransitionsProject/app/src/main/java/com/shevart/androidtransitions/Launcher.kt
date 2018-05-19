@@ -34,10 +34,14 @@ object Launcher {
     }
 
     fun changeImageTransformOverview(activity: Activity) {
-        activity.startActivity(Intent(activity, ChangeImageTransformActivity::class.java))
+        activity.startActivity(Intent(activity, ChangeImageTransformOverviewActivity::class.java))
     }
 
     fun changeScrollOverview(activity: Activity) {
-        activity.startActivity(Intent(activity, ChangeScrollActivity::class.java))
+        activity.startActivity(Intent(activity, ChangeScrollOverviewActivity::class.java))
+    }
+
+    fun autoTransitionOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, AutoTransitionOverviewActivity::class.java))
     }
 }

@@ -6,7 +6,7 @@ import android.support.transition.Transition
 import android.widget.ScrollView
 import com.shevart.androidtransitions.R
 
-class ChangeScrollActivity : AbsTransitionBaseActivity() {
+class ChangeScrollOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideIcon() = R.drawable.change_scroll
 
     override fun provideTitle() = getString(R.string.change_scroll)!!

@@ -6,7 +6,7 @@ import android.support.transition.Transition
 import android.support.transition.TransitionSet
 import com.shevart.androidtransitions.R
 
-class ChangeImageTransformActivity : AbsTransitionBaseActivity() {
+class ChangeImageTransformOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideIcon() = R.drawable.change_image_transform
 
     override fun provideTitle() = getString(R.string.change_image_transform)!!
