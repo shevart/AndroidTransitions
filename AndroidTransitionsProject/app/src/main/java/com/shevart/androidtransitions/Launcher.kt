@@ -32,4 +32,8 @@ object Launcher {
     fun changeTransformOverview(activity: Activity) {
         activity.startActivity(Intent(activity, ChangeTransformOverviewActivity::class.java))
     }
+
+    fun changeImageTransformOverview(activity: Activity) {
+        activity.startActivity(Intent(activity, ChangeImageTransformActivity::class.java))
+    }
 }

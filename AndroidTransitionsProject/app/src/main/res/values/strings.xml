@@ -24,4 +24,5 @@
     <string name="change_bounds_plus_arc_motion">ChangeBounds + ArcMotion</string>
     <string name="change_bounds_plus_pattern_path_motion">ChangeBounds + PatternPathMotion</string>
     <string name="change_transform">ChangeTransform</string>
+    <string name="change_image_transform">ChangeImageTransform</string>
 </resources>
