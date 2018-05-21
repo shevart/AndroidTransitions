@@ -6,6 +6,7 @@ import android.support.transition.Slide
 import android.support.transition.TransitionSet
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
+import com.shevart.androidtransitions.common.SimpleItem
 
 class FragmentsScreenContentTransitionActivity : AbsActivity() {
 
@@ -21,7 +22,6 @@ class FragmentsScreenContentTransitionActivity : AbsActivity() {
 
     private fun startContent() {
         val fragment = ScreenAFragment()
-        fragment.enterTransition = createScreenAEnterTransition()
 
         supportFragmentManager
                 .beginTransaction()
@@ -29,7 +29,11 @@ class FragmentsScreenContentTransitionActivity : AbsActivity() {
                 .commit()
     }
 
-    private fun createScreenAEnterTransition() = TransitionSet().apply {
+    fun openDetail(item: SimpleItem) {
+        
+    }
+
+    private fun createScreenBEnterTransition() = TransitionSet().apply {
         addTransition(Fade())
         addTransition(Slide())
         duration = 600L

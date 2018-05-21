@@ -28,7 +28,7 @@ class MockSimpleListAdapter : BaseRVAdapter<SimpleItem, MockSimpleListAdapter.Vi
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val rootView = itemView.findViewById<View>(R.id.clSimpleItemRoot)!!
-        val ivImage = itemView.findViewById<ImageView>(R.id.ivSceneSameView)!!
+        val ivImage = itemView.findViewById<ImageView>(R.id.ivSimpleItem)!!
         val tvTitle = itemView.findViewById<TextView>(R.id.tvSimpleItemTitle)!!
         val tvText = itemView.findViewById<TextView>(R.id.tvSimpleItemText)!!
     }
