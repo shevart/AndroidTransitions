@@ -34,10 +34,7 @@ class BeginDelayedSampleActivity : AbsActivity() {
         // schedule animation
         TransitionManager.beginDelayedTransition(cvLayoutChangesAnim, transition)
         // change view
-        val heightPx = nextRandomHeightPx()
-        showToast("oneDpInPixels=$oneDpInPixels")
-        showToast("heightPx=$heightPx")
-        flTestContent.setHeight(heightPx)
+        flTestContent.setHeight(nextRandomHeightPx())
     }
 
     private fun showWithAlpha() {

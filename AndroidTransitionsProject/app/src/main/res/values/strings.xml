@@ -28,4 +28,7 @@
     <string name="change_scroll">ChangeScroll</string>
     <string name="auto_transition">AutoTransition</string>
     <string name="change_clip_bounds">ChangeClipBounds</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
