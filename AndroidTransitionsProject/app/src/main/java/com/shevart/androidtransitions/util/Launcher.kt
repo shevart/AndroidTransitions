@@ -1,9 +1,11 @@
-package com.shevart.androidtransitions
+package com.shevart.androidtransitions.util
 
 import android.app.Activity
 import android.content.Intent
 import com.shevart.androidtransitions.transition.overview.base.*
+import com.shevart.androidtransitions.transitionmanager.begindelayedsample.BeginDelayedSampleActivity
 
+// todo sort methods
 object Launcher {
     fun fadeTransitionOverview(activity: Activity) {
         activity.startActivity(Intent(activity, FadeOverviewActivity::class.java))
@@ -47,5 +49,11 @@ object Launcher {
 
     fun autoTransitionOverview(activity: Activity) {
         activity.startActivity(Intent(activity, AutoTransitionOverviewActivity::class.java))
+    }
+
+    object TransitionManager {
+        fun beginDelayedSample(activity: Activity) {
+            activity.startActivity(Intent(activity, BeginDelayedSampleActivity::class.java))
+        }
     }
 }

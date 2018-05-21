@@ -28,4 +28,14 @@
         app:layout_constraintStart_toStartOf="@+id/btScene"
         app:layout_constraintTop_toBottomOf="@+id/btScene" />
 
+    <Button
+        android:id="@+id/btTransitionManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TransitionManager"
+        app:layout_constraintEnd_toEndOf="@+id/btTransition"
+        app:layout_constraintStart_toStartOf="@+id/btTransition"
+        app:layout_constraintTop_toBottomOf="@+id/btTransition" />
+
 </android.support.constraint.ConstraintLayout>

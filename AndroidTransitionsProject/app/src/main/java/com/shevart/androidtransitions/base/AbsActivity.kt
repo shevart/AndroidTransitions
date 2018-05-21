@@ -2,6 +2,7 @@ package com.shevart.androidtransitions.base
 
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.Toast
 
 abstract class AbsActivity : AppCompatActivity() {
     protected fun enableToolbarBackButton() {
@@ -24,5 +25,9 @@ abstract class AbsActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    protected fun showToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }

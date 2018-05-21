@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.FrameLayout
 import com.shevart.androidtransitions.R
 
-@Suppress("FoldInitializerAndIfToElvis", "unused", "ConstantConditionIf")
+@Suppress("FoldInitializerAndIfToElvis", "unused", "ConstantConditionIf", "MemberVisibilityCanBePrivate", "UnnecessaryVariable")
 class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideIcon() = R.drawable.explode
 
@@ -19,7 +19,8 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideLayoutIdSceneB() = R.layout.layout_explode_base_scene_b
 
     override fun provideTransition(): Transition {
-        return getExplodeForEveryChildViewWithEpicenterCallback()
+        return getExplodeForWholeLayout()
+//        return getExplodeForEveryChildViewWithEpicenterCallback()
     }
 
     private fun getExplodeForWholeLayout() = Explode()
@@ -29,7 +30,7 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
         addTransition(Explode().addTarget(FrameLayout::class.java))
 
         // we won't use no smart ways!
-        if (true)return@apply
+        if (true) return@apply
 
         // no smart way)
         addTransition(Explode().addTarget(R.id.frameLayout))
@@ -44,14 +45,19 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     }
 
     private fun getExplodeForEveryChildViewWithEpicenterCallback() = TransitionSet().apply {
-        val epicenterCallback = createEpicenterCallback()
         // smart way
-        addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(FrameLayout::class.java))
+        val explode = Explode()
+        explode.epicenterCallback = createEpicenterCallback()
+
+        addTransition(explode)
+
+        //.addTarget(FrameLayout::class.java)
 
         // we won't use no smart ways!
-        if (true)return@apply
+        if (true) return@apply
 
         // no smart way)
+        val epicenterCallback = createEpicenterCallback()
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout))
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout2))
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout3))
@@ -63,7 +69,7 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
         addTransition(Explode().withEpicenterCallback(epicenterCallback).addTarget(R.id.frameLayout9))
     }
 
-    private fun createEpicenterCallback(): Transition.EpicenterCallback {
+    fun createEpicenterCallback(): Transition.EpicenterCallback {
         var rect: Rect? = null
         val centralView = findViewForEpicenterCallback()
         if (centralView != null) {

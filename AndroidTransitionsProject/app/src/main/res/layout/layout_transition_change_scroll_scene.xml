@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:elevation="4dp"
+            app:cardBackgroundColor="@color/text_gray"
             app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true" />
 
@@ -22,12 +23,14 @@
             android:layout_height="250dp"
             android:elevation="4dp"
             app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/blue"
             app:cardUseCompatPadding="true" />
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:elevation="4dp"
+            app:cardBackgroundColor="@color/text_gray"
             app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true" />
 
@@ -36,12 +39,14 @@
             android:layout_height="250dp"
             android:elevation="4dp"
             app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/blue"
             app:cardUseCompatPadding="true" />
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:elevation="4dp"
+            app:cardBackgroundColor="@color/text_gray"
             app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true" />
 
@@ -50,12 +55,14 @@
             android:layout_height="250dp"
             android:elevation="4dp"
             app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/blue"
             app:cardUseCompatPadding="true" />
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:elevation="4dp"
+            app:cardBackgroundColor="@color/text_gray"
             app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true" />
 
@@ -64,6 +71,9 @@
             android:layout_height="250dp"
             android:elevation="4dp"
             app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/blue"
             app:cardUseCompatPadding="true" />
+
+
     </LinearLayout>
 </ScrollView>

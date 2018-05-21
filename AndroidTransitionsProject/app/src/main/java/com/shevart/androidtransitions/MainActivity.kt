@@ -6,6 +6,7 @@ import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity
 import com.shevart.androidtransitions.scene.samples.enterexitaction.EnterAndExitActionSceneSampleActivity
 import com.shevart.androidtransitions.scene.samples.searchbar.SearchBarSceneSampleActivity
+import com.shevart.androidtransitions.util.Launcher
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AbsActivity() {
@@ -22,15 +23,20 @@ class MainActivity : AbsActivity() {
 
         btTransition.setOnClickListener {
             Launcher.explodeBoundsTransitionOverview(this)
-//            Launcher.changeBoundsArcMotionOverview(this)
+            Launcher.changeBoundsArcMotionOverview(this)
             Launcher.changeBoundsPatternPathMotionOverview(this)
             Launcher.changeImageTransformOverview(this)
             Launcher.changeScrollOverview(this)
             Launcher.autoTransitionOverview(this)
             Launcher.changeClipBoundsOverview(this)
-//            Launcher.fadeTransitionOverview(this)
-//            Launcher.changeBoundsTransitionOverview(this)
-//            Launcher.slideBoundsTransitionOverview(this)
+            Launcher.fadeTransitionOverview(this)
+            Launcher.changeBoundsTransitionOverview(this)
+            Launcher.slideBoundsTransitionOverview(this)
+            Launcher.changeTransformOverview(this)
+        }
+
+        btTransitionManager.setOnClickListener {
+            Launcher.TransitionManager.beginDelayedSample(this)
         }
     }
 }

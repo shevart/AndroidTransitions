@@ -46,7 +46,8 @@
         <activity android:name=".transition.overview.base.ChangeImageTransformOverviewActivity" />
         <activity android:name=".transition.overview.base.ChangeScrollOverviewActivity" />
         <activity android:name=".transition.overview.base.AutoTransitionOverviewActivity" />
-        <activity android:name=".transition.overview.base.ChangeClipBoundsActivity"></activity>
+        <activity android:name=".transition.overview.base.ChangeClipBoundsActivity" />
+        <activity android:name=".transitionmanager.begindelayedsample.BeginDelayedSampleActivity"></activity>
     </application>
 
 </manifest>
