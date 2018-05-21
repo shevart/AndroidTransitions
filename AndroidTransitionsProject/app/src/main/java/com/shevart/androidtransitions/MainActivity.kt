@@ -16,27 +16,29 @@ class MainActivity : AbsActivity() {
         setContentView(R.layout.activity_main)
 
         btScene.setOnClickListener {
+            // todo replace to Launcher
             startActivity(Intent(this, SearchBarSceneSampleActivity::class.java))
             startActivity(Intent(this, ContentByLayoutIdSceneSampleActivity::class.java))
             startActivity(Intent(this, EnterAndExitActionSceneSampleActivity::class.java))
         }
-
         btTransition.setOnClickListener {
-            Launcher.explodeBoundsTransitionOverview(this)
-            Launcher.changeBoundsArcMotionOverview(this)
-            Launcher.changeBoundsPatternPathMotionOverview(this)
-            Launcher.changeImageTransformOverview(this)
-            Launcher.changeScrollOverview(this)
-            Launcher.autoTransitionOverview(this)
-            Launcher.changeClipBoundsOverview(this)
-            Launcher.fadeTransitionOverview(this)
-            Launcher.changeBoundsTransitionOverview(this)
-            Launcher.slideBoundsTransitionOverview(this)
-            Launcher.changeTransformOverview(this)
+            Launcher.Transition.explodeBoundsTransitionOverview(this)
+            Launcher.Transition.changeBoundsArcMotionOverview(this)
+            Launcher.Transition.changeBoundsPatternPathMotionOverview(this)
+            Launcher.Transition.changeImageTransformOverview(this)
+            Launcher.Transition.changeScrollOverview(this)
+            Launcher.Transition.autoTransitionOverview(this)
+            Launcher.Transition.changeClipBoundsOverview(this)
+            Launcher.Transition.fadeTransitionOverview(this)
+            Launcher.Transition.changeBoundsTransitionOverview(this)
+            Launcher.Transition.slideBoundsTransitionOverview(this)
+            Launcher.Transition.changeTransformOverview(this)
         }
-
         btTransitionManager.setOnClickListener {
             Launcher.TransitionManager.beginDelayedSample(this)
+        }
+        btScreenTransitions.setOnClickListener {
+            Launcher.ScreenTransitions.menu(this)
         }
     }
 }

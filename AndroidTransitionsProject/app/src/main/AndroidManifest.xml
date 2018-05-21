@@ -48,7 +48,8 @@
         <activity android:name=".transition.overview.base.AutoTransitionOverviewActivity" />
         <activity android:name=".transition.overview.base.ChangeClipBoundsActivity" />
         <activity android:name=".transitionmanager.begindelayedsample.BeginDelayedSampleActivity" />
-        <activity android:name=".screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity"></activity>
+        <activity android:name=".screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity" />
+        <activity android:name=".screenstransition.ScreenTransitionsTopicActivity"></activity>
     </application>
 
 </manifest>

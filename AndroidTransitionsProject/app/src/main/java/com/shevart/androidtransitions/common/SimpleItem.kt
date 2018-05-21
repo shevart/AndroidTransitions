@@ -8,7 +8,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class SimpleItem(@DrawableRes
                       val imageResId: Int,
-                      @StringRes
-                      val titleResId: Int,
-                      @StringRes
-                      val textResId: Int) : Parcelable
+                      val title: String,
+                      val text: String) : Parcelable

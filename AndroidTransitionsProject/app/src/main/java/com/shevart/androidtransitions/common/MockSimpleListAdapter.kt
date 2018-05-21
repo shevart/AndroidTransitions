@@ -21,8 +21,8 @@ class MockSimpleListAdapter : BaseRVAdapter<SimpleItem, MockSimpleListAdapter.Vi
         val item = getItem(position)
         holder.apply {
             ivImage.setImageResource(item.imageResId)
-            tvTitle.setText(item.titleResId)
-            tvText.setText(item.textResId)
+            tvTitle.text = item.title
+            tvText.text = item.text
         }
     }
 

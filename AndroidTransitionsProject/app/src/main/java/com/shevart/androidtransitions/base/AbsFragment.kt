@@ -11,7 +11,6 @@ import android.widget.Toast
 import com.shevart.androidtransitions.R
 
 abstract class AbsFragment : Fragment() {
-
     @LayoutRes
     protected abstract fun provideLayoutResId(): Int
 

@@ -7,6 +7,7 @@ import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsFragment
 import com.shevart.androidtransitions.common.MockSimpleListAdapter
 import com.shevart.androidtransitions.common.SimpleItem
+import com.shevart.androidtransitions.util.nextSimpleItemsList
 import kotlinx.android.synthetic.main.fragment_screen_a.*
 
 class ScreenAFragment : AbsFragment() {
@@ -18,12 +19,13 @@ class ScreenAFragment : AbsFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = MockSimpleListAdapter()
+        adapter.updateItems(nextSimpleItemsList())
         adapter.setOnItemClickListener(this::onItemSelected)
         rvSimpleItemsScreenA.adapter = adapter
         rvSimpleItemsScreenA.layoutManager = LinearLayoutManager(view.context)
     }
 
     private fun onItemSelected(item: SimpleItem) {
-        showToast(getString(item.titleResId))
+        showToast(item.title)
     }
 }

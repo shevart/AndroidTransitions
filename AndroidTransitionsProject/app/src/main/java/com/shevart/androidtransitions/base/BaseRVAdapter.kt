@@ -34,7 +34,7 @@ abstract class BaseRVAdapter<M, VH : RecyclerView.ViewHolder> : RecyclerView.Ada
 
     protected open fun getItem(pos: Int) = items[pos]
 
-    protected open fun updateItems(items: List<M>) {
+    open fun updateItems(items: List<M>) {
         this.items.clear()
         this.items.addAll(items)
         notifyDataSetChanged()
