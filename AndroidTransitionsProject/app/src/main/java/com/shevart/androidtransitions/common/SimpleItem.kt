@@ -1,12 +1,14 @@
 package com.shevart.androidtransitions.common
 
+import android.os.Parcelable
 import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
+import kotlinx.android.parcel.Parcelize
 
-class SimpleItem(
-        @DrawableRes
-        val imageResId: Int,
-        @StringRes
-        val titleResId: Int,
-        @StringRes
-        val textResId: Int)
+@Parcelize
+data class SimpleItem(@DrawableRes
+                      val imageResId: Int,
+                      @StringRes
+                      val titleResId: Int,
+                      @StringRes
+                      val textResId: Int) : Parcelable
