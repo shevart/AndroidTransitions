@@ -18,3 +18,10 @@ val stockImagesMap: Map<Int, Int> = HashMap<Int, Int>().apply {
     put(5, R.drawable.stock_bus_6)
     put(6, R.drawable.stock_bus_7)
 }
+
+val titlesList = listOf(
+        "Important news",
+        "Great news",
+        "Uninteresting news",
+        "Daily News",
+        "Incredible news")

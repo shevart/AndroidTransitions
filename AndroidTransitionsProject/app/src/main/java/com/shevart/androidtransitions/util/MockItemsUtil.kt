@@ -20,16 +20,10 @@ fun nextSimpleItemsList(size: Int = 25): List<SimpleItem> {
 fun nextSimpleItem(number: Int) = SimpleItem(
         imageResId = nextImageResId(),
         title = nextTitle(number),
-        text = nextText(number))
+        text = longText)
 
 @DrawableRes
 private fun nextImageResId() =
         stockImagesMap[random.nextInt(stockImagesMap.size)]!!
 
-private fun nextTitle(number: Int): String {
-    return "Title $number"
-}
-
-private fun nextText(number: Int): String {
-    return "Text $number. $longText"
-}
+private fun nextTitle(number: Int) = titlesList[random.nextInt(titlesList.size)]

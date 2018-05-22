@@ -26,6 +26,6 @@ class ScreenAFragment : AbsFragment() {
     }
 
     private fun onItemSelected(item: SimpleItem) {
-        showToast(item.title)
+        (activity as FragmentsScreenContentTransitionActivity).openDetail(item)
     }
 }
