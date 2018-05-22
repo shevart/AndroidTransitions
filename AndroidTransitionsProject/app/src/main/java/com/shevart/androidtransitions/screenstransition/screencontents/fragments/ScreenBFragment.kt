@@ -5,7 +5,7 @@ import android.view.View
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsFragment
 import com.shevart.androidtransitions.common.SimpleItem
-import kotlinx.android.synthetic.main.fragment_screen_b.*
+import kotlinx.android.synthetic.main.layout_detail_screen.*
 
 class ScreenBFragment : AbsFragment() {
     override fun provideLayoutResId() = R.layout.fragment_screen_b

@@ -17,4 +17,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btActivityContentTransitionByTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Activity Content By Theme"
+        app:layout_constraintEnd_toEndOf="@+id/btFragmentsContentTransition"
+        app:layout_constraintStart_toStartOf="@+id/btFragmentsContentTransition"
+        app:layout_constraintTop_toBottomOf="@+id/btFragmentsContentTransition" />
 </android.support.constraint.ConstraintLayout>

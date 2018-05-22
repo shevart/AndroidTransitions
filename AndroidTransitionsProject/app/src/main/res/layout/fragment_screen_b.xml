@@ -1,37 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
     tools:context=".screenstransition.screencontents.fragments.ScreenBFragment">
 
-    <ImageView
-        android:id="@+id/ivDetailScreenImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        tools:src="@drawable/stock_bus_1" />
-
-    <TextView
-        android:id="@+id/tvDetailScreenTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textColor="@android:color/black"
-        android:textSize="27sp"
-        tools:text="Title" />
-
-    <TextView
-        android:id="@+id/tvDetailScreenText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        tools:text="TextView" />
-</LinearLayout>
+    <include layout="@layout/layout_detail_screen" />
+</FrameLayout>
