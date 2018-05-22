@@ -1,5 +1,6 @@
 package com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -29,6 +30,6 @@ class ContentTransitionByThemeScreenAActivity : AbsActivity() {
     private fun onItemSelected(item: SimpleItem) {
         val intent = Intent(this, ContentTransitionByThemeScreenBActivity::class.java)
         intent.putExtra(SIMPLE_ITEM, item)
-        startActivity(intent)
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 }

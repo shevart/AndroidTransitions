@@ -81,10 +81,10 @@
         <activity
             android:name=".screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenAActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ContentTransitionAppTheme" />
+            android:theme="@style/ContentTransitionAppTheme.AutoTransition" />
         <activity
             android:name=".screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ContentTransitionAppTheme" />
+            android:theme="@style/ContentTransitionAppTheme.AutoTransition" />
     </application>
 </manifest>

@@ -2,12 +2,20 @@
 <resources>
     <style name="ContentTransitionAppTheme" parent="Theme.AppCompat.Light">
         <!-- Enable window content transitions -->
-        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowContentTransitions">true</item>
         <!-- Specify enter and exit transitions -->
         <item name="android:windowEnterTransition">@transition/slide</item>
         <item name="android:windowExitTransition">@transition/slide</item>
+
         <item name="android:windowReturnTransition">@transition/slide</item>
         <item name="android:windowReenterTransition">@transition/slide</item>
+    </style>
+
+    <style name="ContentTransitionAppTheme.AutoTransition">
+        <!-- Specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/auto_transition</item>
+        <item name="android:windowExitTransition">@transition/auto_transition</item>
+        <item name="android:windowReturnTransition">@transition/auto_transition</item>
+        <item name="android:windowReenterTransition">@transition/auto_transition</item>
     </style>
 </resources>
