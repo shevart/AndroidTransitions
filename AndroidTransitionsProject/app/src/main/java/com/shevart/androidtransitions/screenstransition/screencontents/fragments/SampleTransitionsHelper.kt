@@ -6,7 +6,6 @@ import android.support.transition.*
 import android.view.Gravity
 import com.shevart.androidtransitions.R
 
-
 private const val transitionDuration = 300L / 2
 
 object NoTransitions : SampleContentTransitionsProvider {

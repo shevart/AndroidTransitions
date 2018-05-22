@@ -14,7 +14,6 @@ class ScreenBFragment : AbsFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val simpleItem = getSimpleItems(arguments)
-
         ivDetailScreenImage.setImageResource(simpleItem.imageResId)
         tvDetailScreenTitle.text = simpleItem.title
         tvDetailScreenText.text = simpleItem.text
