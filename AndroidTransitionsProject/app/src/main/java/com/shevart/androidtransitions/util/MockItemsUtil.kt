@@ -5,6 +5,7 @@ import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.common.SimpleItem
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 private val random = Random()
 
@@ -22,14 +23,13 @@ fun nextSimpleItem(number: Int) = SimpleItem(
         text = nextText(number))
 
 @DrawableRes
-private fun nextImageResId(): Int {
-    return R.drawable.sea
-}
+private fun nextImageResId() =
+        stockImagesMap[random.nextInt(stockImagesMap.size)]!!
 
 private fun nextTitle(number: Int): String {
     return "Title $number"
 }
 
 private fun nextText(number: Int): String {
-    return "Text $number"
+    return "Text $number. $longText"
 }

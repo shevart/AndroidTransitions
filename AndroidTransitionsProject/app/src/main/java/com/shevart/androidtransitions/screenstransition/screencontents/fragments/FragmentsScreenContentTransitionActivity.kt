@@ -30,7 +30,7 @@ class FragmentsScreenContentTransitionActivity : AbsActivity() {
     }
 
     fun openDetail(item: SimpleItem) {
-        
+
     }
 
     private fun createScreenBEnterTransition() = TransitionSet().apply {
