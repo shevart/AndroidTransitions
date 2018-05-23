@@ -1,6 +1,7 @@
 package com.shevart.androidtransitions.screenstransition.sharedelements.fragments
 
 import android.os.Bundle
+import android.support.transition.Fade
 import android.support.v4.app.FragmentTransaction
 import android.view.View
 import com.shevart.androidtransitions.R
@@ -23,9 +24,14 @@ class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItem
     }
 
     override fun onItemSelected(item: SimpleItem, view: View) {
+        val fragment = SharedElementBFragment.getInstance(item)
+        fragment.enterTransition = Fade()
+        fragment.enterTransition = Fade().apply { duration = 100L }
+
         supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.flFragmentsContainer, SharedElementBFragment.getInstance(item))
+                .replace(R.id.flFragmentsContainer, fragment)
+                .addToBackStack(null)
                 .addSharedElement(view, view.transitionName)
                 .commit()
     }

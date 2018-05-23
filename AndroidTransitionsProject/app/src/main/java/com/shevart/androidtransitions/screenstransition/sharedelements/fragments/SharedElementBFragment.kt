@@ -1,7 +1,7 @@
 package com.shevart.androidtransitions.screenstransition.sharedelements.fragments
 
 import android.os.Bundle
-import android.support.transition.AutoTransition
+import android.support.transition.TransitionInflater
 import android.view.View
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsFragment
@@ -14,7 +14,9 @@ class SharedElementBFragment : AbsFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sharedElementEnterTransition = AutoTransition()
+        sharedElementEnterTransition = TransitionInflater
+                .from(context)
+                .inflateTransition(android.R.transition.move)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
