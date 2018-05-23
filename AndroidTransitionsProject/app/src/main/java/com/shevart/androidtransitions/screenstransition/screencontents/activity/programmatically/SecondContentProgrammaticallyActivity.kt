@@ -2,6 +2,8 @@ package com.shevart.androidtransitions.screenstransition.screencontents.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.Fade
+import android.view.Window
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
@@ -12,6 +14,8 @@ class SecondContentProgrammaticallyActivity : AbsActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // set content transitions
+        setContentTransition()
         setContentView(R.layout.activity_second_content_programmatically)
         initToolbar()
 
@@ -19,6 +23,14 @@ class SecondContentProgrammaticallyActivity : AbsActivity() {
         ivDetailScreenImage.setImageResource(item.imageResId)
         tvDetailScreenTitle.text = item.title
         tvDetailScreenText.text = item.text
+    }
+
+    private fun setContentTransition() {
+        window.apply {
+            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+
+            enterTransition = Fade()
+        }
     }
 
     private fun initToolbar() {

@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.transition.Explode
 import android.support.v7.widget.LinearLayoutManager
+import android.transition.Slide
+import android.view.Gravity
 import android.view.Window
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
@@ -29,6 +31,14 @@ class FirstContentProgrammaticallyActivity : AbsActivity() {
         rvPCScreenA.layoutManager = LinearLayoutManager(this)
     }
 
+    private fun setContentTransition() {
+        window.apply {
+            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+
+            exitTransition = Explode()
+        }
+    }
+
     private fun initToolbar() {
         enableToolbarBackButton()
         setTitle(R.string.activity_content_programmatically)
@@ -38,13 +48,5 @@ class FirstContentProgrammaticallyActivity : AbsActivity() {
         val intent = Intent(this, SecondContentProgrammaticallyActivity::class.java)
         intent.putExtra(SIMPLE_ITEM, item)
         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-    }
-
-    private fun setContentTransition() {
-        window.apply {
-            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-
-            exitTransition = Explode()
-        }
     }
 }
