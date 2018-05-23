@@ -6,6 +6,7 @@ import com.shevart.androidtransitions.screenstransition.ScreenTransitionsTopicAc
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenAActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity
+import com.shevart.androidtransitions.screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity
 import com.shevart.androidtransitions.transition.overview.base.*
 import com.shevart.androidtransitions.transitionmanager.begindelayedsample.BeginDelayedSampleActivity
 
@@ -79,6 +80,12 @@ object Launcher {
 
             fun activitySampleProgrammatically(activity: Activity) {
                 activity.startActivity(Intent(activity, FirstContentProgrammaticallyActivity::class.java))
+            }
+        }
+
+        object SharedElements {
+            fun fragment(activity: Activity) {
+                activity.startActivity(Intent(activity, FragmentsSharedElementsActivity::class.java))
             }
         }
     }

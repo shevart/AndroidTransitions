@@ -5,19 +5,19 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsFragment
-import com.shevart.androidtransitions.common.MockSimpleListAdapter
+import com.shevart.androidtransitions.common.MockSimpleItemAdapter
 import com.shevart.androidtransitions.common.SimpleItem
 import kotlinx.android.synthetic.main.fragment_screen_a.*
 
 class ScreenAFragment : AbsFragment() {
-    private lateinit var adapter: MockSimpleListAdapter
+    private lateinit var adapter: MockSimpleItemAdapter
 
     override fun provideLayoutResId() = R.layout.fragment_screen_a
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = MockSimpleListAdapter()
+        adapter = MockSimpleItemAdapter()
         adapter.updateItems(getItems())
         adapter.setOnItemClickListener(this::onItemSelected)
         rvSimpleItemsScreenA.adapter = adapter

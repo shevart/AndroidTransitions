@@ -1,13 +1,13 @@
 package com.shevart.androidtransitions.util
 
 import android.support.annotation.DrawableRes
-import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.common.SimpleItem
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 private val random = Random()
+
+private var id = 1
 
 fun nextSimpleItemsList(size: Int = 25): List<SimpleItem> {
     return ArrayList<SimpleItem>().apply {
@@ -18,6 +18,7 @@ fun nextSimpleItemsList(size: Int = 25): List<SimpleItem> {
 }
 
 fun nextSimpleItem(number: Int) = SimpleItem(
+        id = id++,
         imageResId = nextImageResId(),
         title = nextTitle(number),
         text = longText)

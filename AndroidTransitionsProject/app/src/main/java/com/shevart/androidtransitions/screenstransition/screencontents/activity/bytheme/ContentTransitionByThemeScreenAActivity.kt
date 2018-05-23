@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
-import com.shevart.androidtransitions.common.MockSimpleListAdapter
+import com.shevart.androidtransitions.common.MockSimpleItemAdapter
 import com.shevart.androidtransitions.common.SimpleItem
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity.Companion.SIMPLE_ITEM
 import com.shevart.androidtransitions.util.nextSimpleItemsList
@@ -20,7 +20,7 @@ class ContentTransitionByThemeScreenAActivity : AbsActivity() {
         setContentView(R.layout.activity_content_transition_by_theme_screen_a)
         initToolbar()
 
-        val adapter = MockSimpleListAdapter()
+        val adapter = MockSimpleItemAdapter()
         adapter.updateItems(nextSimpleItemsList())
         adapter.setOnItemClickListener(this::onItemSelected)
         rvNotifications.layoutManager = LinearLayoutManager(this)

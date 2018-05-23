@@ -13,7 +13,7 @@ class ScreenBFragment : AbsFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val simpleItem = getSimpleItems(arguments)
+        val simpleItem = getSimpleItem(arguments)
         ivDetailScreenImage.setImageResource(simpleItem.imageResId)
         tvDetailScreenTitle.text = simpleItem.title
         tvDetailScreenText.text = simpleItem.text
@@ -28,6 +28,6 @@ class ScreenBFragment : AbsFragment() {
             }
         }
 
-        fun getSimpleItems(arg: Bundle?): SimpleItem = arg!!.getParcelable(SIMPLE_ITEM_KEY)
+        fun getSimpleItem(arg: Bundle?): SimpleItem = arg!!.getParcelable(SIMPLE_ITEM_KEY)
     }
 }
