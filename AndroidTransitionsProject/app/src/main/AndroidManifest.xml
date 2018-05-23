@@ -86,5 +86,8 @@
             android:name=".screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ContentTransitionAppTheme.AutoTransition" />
+        <activity android:name=".screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity" />
+        <activity android:name=".screenstransition.screencontents.activity.programmatically.SecondContentProgrammaticallyActivity"></activity>
     </application>
+
 </manifest>

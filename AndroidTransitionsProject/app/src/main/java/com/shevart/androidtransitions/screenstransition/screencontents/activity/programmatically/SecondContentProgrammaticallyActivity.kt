@@ -1,19 +1,21 @@
-package com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme
+package com.shevart.androidtransitions.screenstransition.screencontents.activity.programmatically
 
 import android.content.Intent
 import android.os.Bundle
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
+import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity
 import kotlinx.android.synthetic.main.layout_detail_screen.*
 
-class ContentTransitionByThemeScreenBActivity : AbsActivity() {
+class SecondContentProgrammaticallyActivity : AbsActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_content_transition_by_theme_screen_b)
+        setContentView(R.layout.activity_second_content_programmatically)
         initToolbar()
 
-        val item = getSimpleItem(intent)
+        val item = ContentTransitionByThemeScreenBActivity.getSimpleItem(intent)
         ivDetailScreenImage.setImageResource(item.imageResId)
         tvDetailScreenTitle.text = item.title
         tvDetailScreenText.text = item.text
@@ -21,7 +23,7 @@ class ContentTransitionByThemeScreenBActivity : AbsActivity() {
 
     private fun initToolbar() {
         enableToolbarBackButton()
-        setTitle(R.string.activity_content_by_theme)
+        setTitle(R.string.activity_content_programmatically)
     }
 
     companion object {

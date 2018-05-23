@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Fragments Content"
+        android:text="@string/fragments_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,8 +23,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Activity Content By Theme"
+        android:text="@string/activity_content_by_theme"
         app:layout_constraintEnd_toEndOf="@+id/btFragmentsContentTransition"
         app:layout_constraintStart_toStartOf="@+id/btFragmentsContentTransition"
         app:layout_constraintTop_toBottomOf="@+id/btFragmentsContentTransition" />
+
+    <Button
+        android:id="@+id/btActivityContentTransitionProgrammatically"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/activity_content_programmatically"
+        app:layout_constraintEnd_toEndOf="@+id/btActivityContentTransitionByTheme"
+        app:layout_constraintStart_toStartOf="@+id/btActivityContentTransitionByTheme"
+        app:layout_constraintTop_toBottomOf="@+id/btActivityContentTransitionByTheme" />
 </android.support.constraint.ConstraintLayout>

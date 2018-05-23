@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import com.shevart.androidtransitions.screenstransition.ScreenTransitionsTopicActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenAActivity
+import com.shevart.androidtransitions.screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity
 import com.shevart.androidtransitions.transition.overview.base.*
 import com.shevart.androidtransitions.transitionmanager.begindelayedsample.BeginDelayedSampleActivity
@@ -74,6 +75,10 @@ object Launcher {
 
             fun activitySampleByTheme(activity: Activity) {
                 activity.startActivity(Intent(activity, ContentTransitionByThemeScreenAActivity::class.java))
+            }
+
+            fun activitySampleProgrammatically(activity: Activity) {
+                activity.startActivity(Intent(activity, FirstContentProgrammaticallyActivity::class.java))
             }
         }
     }

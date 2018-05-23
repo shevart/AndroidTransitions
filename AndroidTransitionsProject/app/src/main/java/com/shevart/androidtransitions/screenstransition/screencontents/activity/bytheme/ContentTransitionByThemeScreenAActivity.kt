@@ -18,13 +18,18 @@ class ContentTransitionByThemeScreenAActivity : AbsActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content_transition_by_theme_screen_a)
-        enableToolbarBackButton()
+        initToolbar()
 
         val adapter = MockSimpleListAdapter()
         adapter.updateItems(nextSimpleItemsList())
         adapter.setOnItemClickListener(this::onItemSelected)
         rvNotifications.layoutManager = LinearLayoutManager(this)
         rvNotifications.adapter = adapter
+    }
+
+    private fun initToolbar() {
+        enableToolbarBackButton()
+        setTitle(R.string.activity_content_by_theme)
     }
 
     private fun onItemSelected(item: SimpleItem) {

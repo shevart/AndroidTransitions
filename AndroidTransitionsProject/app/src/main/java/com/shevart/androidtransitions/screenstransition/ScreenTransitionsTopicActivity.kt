@@ -19,5 +19,8 @@ class ScreenTransitionsTopicActivity : AbsActivity() {
         btActivityContentTransitionByTheme.setOnClickListener {
             Launcher.ScreenTransitions.Content.activitySampleByTheme(this)
         }
+        btActivityContentTransitionProgrammatically.setOnClickListener {
+            Launcher.ScreenTransitions.Content.activitySampleProgrammatically(this)
+        }
     }
 }
