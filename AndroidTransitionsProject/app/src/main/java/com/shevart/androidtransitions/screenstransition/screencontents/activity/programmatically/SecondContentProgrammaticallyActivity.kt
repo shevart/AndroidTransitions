@@ -10,6 +10,7 @@ import com.shevart.androidtransitions.common.SimpleItem
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity
 import kotlinx.android.synthetic.main.layout_detail_screen.*
 
+@Suppress("unused")
 class SecondContentProgrammaticallyActivity : AbsActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +29,6 @@ class SecondContentProgrammaticallyActivity : AbsActivity() {
     private fun setContentTransition() {
         window.apply {
             requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-
             enterTransition = Fade()
         }
     }

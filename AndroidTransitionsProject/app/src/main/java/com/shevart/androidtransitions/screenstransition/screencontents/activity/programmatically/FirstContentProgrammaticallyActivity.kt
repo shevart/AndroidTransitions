@@ -34,7 +34,6 @@ class FirstContentProgrammaticallyActivity : AbsActivity() {
     private fun setContentTransition() {
         window.apply {
             requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-
             exitTransition = Explode()
         }
     }
