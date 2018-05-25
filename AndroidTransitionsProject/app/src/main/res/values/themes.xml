@@ -18,4 +18,11 @@
         <item name="android:windowReturnTransition">@transition/auto_transition</item>
         <item name="android:windowReenterTransition">@transition/auto_transition</item>
     </style>
+
+    <style name="SharedElementsTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
 </resources>

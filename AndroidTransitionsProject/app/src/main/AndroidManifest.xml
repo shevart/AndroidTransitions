@@ -86,9 +86,22 @@
             android:name=".screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ContentTransitionAppTheme.AutoTransition" />
-        <activity android:name=".screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity" />
-        <activity android:name=".screenstransition.screencontents.activity.programmatically.SecondContentProgrammaticallyActivity" />
-        <activity android:name=".screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity"></activity>
+        <activity
+            android:name=".screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screenstransition.screencontents.activity.programmatically.SecondContentProgrammaticallyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screenstransition.sharedelements.activity.SharedElementsAActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SharedElementsTheme" />
+        <activity
+            android:name=".screenstransition.sharedelements.activity.SharedElementsBActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SharedElementsTheme" />
     </application>
-
 </manifest>
