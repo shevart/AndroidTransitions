@@ -98,7 +98,7 @@
         <activity
             android:name=".screenstransition.sharedelements.activity.SharedElementsAActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SharedElementsTheme" />
+            android:theme="@style/SharedElementsThemeA" />
         <activity
             android:name=".screenstransition.sharedelements.activity.SharedElementsBActivity"
             android:screenOrientation="portrait"

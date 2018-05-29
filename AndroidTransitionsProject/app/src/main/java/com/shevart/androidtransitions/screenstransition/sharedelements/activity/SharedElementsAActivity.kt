@@ -1,11 +1,14 @@
 package com.shevart.androidtransitions.screenstransition.sharedelements.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.transition.ArcMotion
+import android.transition.ChangeBounds
+import android.transition.Fade
 import android.view.View
+import android.view.Window
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
@@ -18,6 +21,7 @@ class SharedElementsAActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sharedElementsInit()
         setContentView(R.layout.activity_shared_elements_a)
         initToolbar()
 
@@ -38,5 +42,16 @@ class SharedElementsAActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.
     private fun initToolbar() {
         enableToolbarBackButton()
         setTitle(R.string.shared_elements_by_theme)
+    }
+
+    private fun sharedElementsInit() {
+        // todo before use stop use SharedElements theme
+//        window.apply {
+//            requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+//            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+//
+//            sharedElementExitTransition = Fade()
+//            sharedElementReturnTransition = Fade()
+//        }
     }
 }
