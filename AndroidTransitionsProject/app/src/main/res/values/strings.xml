@@ -36,4 +36,7 @@
     <string name="activity_content_programmatically">Activity Content Programmatically</string>
     <string name="shared_elements_fragments">Shared Elements Fragments</string>
     <string name="shared_elements_by_theme">Shared Elements by Theme</string>
+    <string name="fragment_a">Fragment A</string>
+    <string name="fragment_b">Fragment B</string>
+    <string name="shared_element_triangle">shared_element_triangle</string>
 </resources>

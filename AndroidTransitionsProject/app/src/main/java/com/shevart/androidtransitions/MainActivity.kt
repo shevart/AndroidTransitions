@@ -40,5 +40,8 @@ class MainActivity : AbsActivity() {
         btScreenTransitions.setOnClickListener {
             Launcher.ScreenTransitions.menu(this)
         }
+        btSpecialCases.setOnClickListener {
+            Launcher.SpecialCases.triangleScreens(this)
+        }
     }
 }

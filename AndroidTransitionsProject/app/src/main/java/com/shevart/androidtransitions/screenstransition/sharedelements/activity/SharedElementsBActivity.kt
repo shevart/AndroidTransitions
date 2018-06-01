@@ -8,6 +8,7 @@ import android.transition.ChangeBounds
 import android.transition.Fade
 import android.transition.PatternPathMotion
 import android.view.Window
+import androidx.core.view.doOnPreDraw
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
@@ -27,6 +28,11 @@ class SharedElementsBActivity : AbsActivity() {
         tvDetailScreenText.text = item.text
 
         ivDetailScreenImage.transitionName = item.imageViewTransitionName()
+
+        postponeEnterTransition()
+        ivDetailScreenImage.doOnPreDraw {
+            startPostponedEnterTransition()
+        }
     }
 
     private fun initToolbar() {
