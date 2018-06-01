@@ -1,6 +1,7 @@
 package com.shevart.androidtransitions.specialcases.screentriangle
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +9,13 @@ import android.support.transition.Transition
 import android.support.transition.Slide
 import android.view.Gravity
 import android.view.View
+import androidx.core.view.postDelayed
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.specialcases.screentriangle.fragments.FirstFragment
 import com.shevart.androidtransitions.specialcases.screentriangle.fragments.SecondFragment
 import com.shevart.androidtransitions.specialcases.screentriangle.middlescreen.MiddleScreensHostActivity
+import com.shevart.androidtransitions.util.resultCodeStr
 import kotlinx.android.synthetic.main.activity_screen_triangle_start.*
 
 class ScreenTriangleStartActivity : AbsActivity() {
@@ -35,6 +38,20 @@ class ScreenTriangleStartActivity : AbsActivity() {
         btTriangleForvard.setOnClickListener {
             if (getCurrentFragment() !is SecondFragment) {
                 showSecondFragment()
+            }
+        }
+    }
+
+    override fun onActivityReenter(resultCode: Int, data: Intent?) {
+        super.onActivityReenter(resultCode, data)
+
+        if (resultCode == Activity.RESULT_OK) {
+            postponeEnterTransition()
+            showSecondFragmentNoStartAnim()
+
+            // todo remove
+            btTriangleForvard.postDelayed(500L) {
+                startPostponedEnterTransition()
             }
         }
     }
@@ -69,6 +86,23 @@ class ScreenTriangleStartActivity : AbsActivity() {
                 .replace(R.id.flTriangleContainer, nextFragment)
                 .addToBackStack(null)
                 .commit()
+
+    }
+
+    private fun showSecondFragmentNoStartAnim() {
+        val nextFragment = SecondFragment()
+        nextFragment.enterTransition = null
+        nextFragment.returnTransition = Slide(Gravity.END).baseSettings()
+
+        val firstFragment = getCurrentFragment()
+        firstFragment?.exitTransition = null
+        firstFragment?.reenterTransition = Slide(Gravity.START).baseSettings(true)
+
+        supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flTriangleContainer, nextFragment)
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
 
     }
 
