@@ -49,9 +49,10 @@ class ScreenTriangleStartActivity : AbsActivity() {
             postponeEnterTransition()
             showSecondFragmentNoStartAnim()
 
-            // todo remove
-            btTriangleForvard.postDelayed(500L) {
-                startPostponedEnterTransition()
+
+            btTriangleForvard.postDelayed(100L) {
+                // todo use this if you want start postponedEnterTransition from Activity
+                // startPostponedEnterTransition()
             }
         }
     }
