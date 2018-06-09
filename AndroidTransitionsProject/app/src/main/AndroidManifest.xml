@@ -103,8 +103,13 @@
             android:name=".screenstransition.sharedelements.activity.SharedElementsBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SharedElementsTheme" />
-        <activity android:name=".specialcases.screentriangle.ScreenTriangleStartActivity" />
-        <activity android:name=".specialcases.screentriangle.middlescreen.MiddleScreensHostActivity"></activity>
+        <activity
+            android:name=".specialcases.screentriangle.ScreenTriangleStartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".specialcases.screentriangle.middlescreen.MiddleScreensHostActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".transition.overview.custom.ChangeIconImageTransitionActivity"></activity>
     </application>
 
 </manifest>

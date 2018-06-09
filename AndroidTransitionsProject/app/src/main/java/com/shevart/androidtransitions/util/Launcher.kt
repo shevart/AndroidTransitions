@@ -10,6 +10,7 @@ import com.shevart.androidtransitions.screenstransition.sharedelements.activity.
 import com.shevart.androidtransitions.screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity
 import com.shevart.androidtransitions.specialcases.screentriangle.ScreenTriangleStartActivity
 import com.shevart.androidtransitions.transition.overview.base.*
+import com.shevart.androidtransitions.transition.overview.custom.ChangeIconImageTransitionActivity
 import com.shevart.androidtransitions.transitionmanager.begindelayedsample.BeginDelayedSampleActivity
 
 // todo sort methods
@@ -57,6 +58,12 @@ object Launcher {
 
         fun autoTransitionOverview(activity: Activity) {
             activity.startActivity(Intent(activity, AutoTransitionOverviewActivity::class.java))
+        }
+
+        object Custom {
+            fun changeIconImageTransitionOverview(activity: Activity) {
+                activity.startActivity(Intent(activity, ChangeIconImageTransitionActivity::class.java))
+            }
         }
     }
 

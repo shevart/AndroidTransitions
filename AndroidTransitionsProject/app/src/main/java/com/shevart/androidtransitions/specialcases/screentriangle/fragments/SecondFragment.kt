@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.doOnPreDraw
 import com.shevart.androidtransitions.R
+import com.shevart.androidtransitions.util.getDebuggingSharedElementsCallback
 import kotlinx.android.synthetic.main.fragment_second.*
 
 class SecondFragment : Fragment() {
@@ -15,6 +16,7 @@ class SecondFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+        setEnterSharedElementCallback(getDebuggingSharedElementsCallback("FRAGMENT"))
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

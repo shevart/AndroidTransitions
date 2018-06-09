@@ -39,4 +39,5 @@
     <string name="fragment_a">Fragment A</string>
     <string name="fragment_b">Fragment B</string>
     <string name="shared_element_triangle">shared_element_triangle</string>
+    <string name="shared_element_triangle_2">shared_element_triangle_2</string>
 </resources>

@@ -1,13 +1,17 @@
 package com.shevart.androidtransitions.specialcases.screentriangle.middlescreen
 
 import android.app.Activity
+
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.SharedElementCallback
 import android.transition.Transition
 import android.transition.TransitionInflater
 import android.view.View
 import android.view.Window
 import com.shevart.androidtransitions.R
+import com.shevart.androidtransitions.util.nextSimpleItem
 import kotlinx.android.synthetic.main.activity_middle_screens_host.*
 
 class MiddleScreensHostActivity : AppCompatActivity() {
@@ -29,13 +33,22 @@ class MiddleScreensHostActivity : AppCompatActivity() {
         override fun onTransitionStart(transition: Transition) {
             hideContent()
         }
+    }
+    private val sharedElementCallback = object : SharedElementCallback() {
+        override fun onMapSharedElements(names: MutableList<String>?, sharedElements: MutableMap<String, View>?) {
+            super.onMapSharedElements(names, sharedElements)
 
+            val newTransitionName = getString(R.string.shared_element_triangle_2)
+            names?.add(newTransitionName)
+            sharedElements?.put(newTransitionName, clMiddleScreenRoot)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setSharedElementsTransition()
         setContentView(R.layout.activity_middle_screens_host)
+        setEnterSharedElementCallback(sharedElementCallback)
 
         hideContent()
 
@@ -44,8 +57,9 @@ class MiddleScreensHostActivity : AppCompatActivity() {
             finishAfterTransition()
         }
         btMiddleBackToSecond.setOnClickListener {
+//            clMiddleScreenRoot.transitionName = getString(R.string.shared_element_triangle_2)
             hideContent()
-            setResult(Activity.RESULT_OK)
+            setResult(Activity.RESULT_OK, getFakeResult())
             finishAfterTransition()
         }
     }
@@ -73,4 +87,6 @@ class MiddleScreensHostActivity : AppCompatActivity() {
             TransitionInflater
                     .from(this)
                     .inflateTransition(android.R.transition.move)
+
+    private fun getFakeResult() = Intent().apply { putExtra("SIMPLE_ITEM", nextSimpleItem(1)) }
 }

@@ -33,6 +33,7 @@ class MainActivity : AbsActivity() {
             Launcher.Transition.changeBoundsTransitionOverview(this)
             Launcher.Transition.slideBoundsTransitionOverview(this)
             Launcher.Transition.changeTransformOverview(this)
+            Launcher.Transition.Custom.changeIconImageTransitionOverview(this)
         }
         btTransitionManager.setOnClickListener {
             Launcher.TransitionManager.beginDelayedSample(this)
