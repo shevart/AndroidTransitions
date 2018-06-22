@@ -28,5 +28,8 @@ class ScreenTransitionsTopicActivity : AbsActivity() {
         btSharedElementsActivityByTheme.setOnClickListener {
             Launcher.ScreenTransitions.SharedElements.activityByTheme(this)
         }
+        btSharedElementsCallback.setOnClickListener {
+            Launcher.ScreenTransitions.SharedElements.sharedElementsCallback(this)
+        }
     }
 }

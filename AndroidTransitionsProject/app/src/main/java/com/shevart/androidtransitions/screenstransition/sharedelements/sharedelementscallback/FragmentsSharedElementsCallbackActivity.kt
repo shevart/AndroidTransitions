@@ -1,4 +1,4 @@
-package com.shevart.androidtransitions.screenstransition.sharedelements.fragments
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback
 
 import android.os.Bundle
 import android.support.transition.Fade
@@ -7,10 +7,12 @@ import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
 import com.shevart.androidtransitions.screenstransition.sharedelements.SharedElementsSimpleIItemAdapter
+import com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.helper.SharedElementsFragmentsHelper
 import com.shevart.androidtransitions.util.nextSimpleItemsList
 
-class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.OnItemViewClickListener {
+class FragmentsSharedElementsCallbackActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.OnItemViewClickListener {
     private val items: List<SimpleItem> by lazy { nextSimpleItemsList() }
+    private val validator = SharedElementsFragmentsHelper()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +25,15 @@ class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItem
     }
 
     override fun onItemSelected(item: SimpleItem, view: View) {
-        val fragment = SharedElementBFragment.getInstance(item)
+        val fragment = SecBFragment.getInstance(item)
         fragment.enterTransition = Fade()
         fragment.enterTransition = Fade().apply { duration = 100L }
+
+        val prevFragment = findCurrentFragment()!!
+        validator.validateSharedElementsScreenTransition(
+                screenTransitionName = "A-to-B",
+                fragmentFrom = prevFragment,
+                fragmentTo = fragment)
 
         supportFragmentManager
                 .beginTransaction()
@@ -40,7 +48,8 @@ class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItem
     private fun startContent() {
         supportFragmentManager
                 .beginTransaction()
-                .add(R.id.flFragmentsContainer, SharedElementAFragment())
+                .add(R.id.flFragmentsContainer, SecAFragment())
+                .setReorderingAllowed(true)
                 .commit()
     }
 

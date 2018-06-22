@@ -59,4 +59,14 @@
         app:layout_constraintEnd_toEndOf="@+id/btSharedElementsFragments"
         app:layout_constraintStart_toStartOf="@+id/btSharedElementsFragments"
         app:layout_constraintTop_toBottomOf="@+id/btSharedElementsFragments" />
+
+    <Button
+        android:id="@+id/btSharedElementsCallback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Shared Elements Callback"
+        app:layout_constraintEnd_toEndOf="@+id/btSharedElementsActivityByTheme"
+        app:layout_constraintStart_toStartOf="@+id/btSharedElementsActivityByTheme"
+        app:layout_constraintTop_toBottomOf="@+id/btSharedElementsActivityByTheme" />
 </android.support.constraint.ConstraintLayout>

@@ -109,7 +109,8 @@
         <activity
             android:name=".specialcases.screentriangle.middlescreen.MiddleScreensHostActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".transition.overview.custom.ChangeIconImageTransitionActivity"></activity>
+        <activity android:name=".transition.overview.custom.ChangeIconImageTransitionActivity" />
+        <activity android:name=".screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity"></activity>
     </application>
 
 </manifest>

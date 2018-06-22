@@ -8,6 +8,7 @@ import com.shevart.androidtransitions.screenstransition.screencontents.activity.
 import com.shevart.androidtransitions.screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity
 import com.shevart.androidtransitions.screenstransition.sharedelements.activity.SharedElementsAActivity
 import com.shevart.androidtransitions.screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity
+import com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity
 import com.shevart.androidtransitions.specialcases.screentriangle.ScreenTriangleStartActivity
 import com.shevart.androidtransitions.transition.overview.base.*
 import com.shevart.androidtransitions.transition.overview.custom.ChangeIconImageTransitionActivity
@@ -99,6 +100,10 @@ object Launcher {
 
             fun activityByTheme(activity: Activity) {
                 activity.startActivity(Intent(activity, SharedElementsAActivity::class.java))
+            }
+
+            fun sharedElementsCallback(activity: Activity) {
+                activity.startActivity(Intent(activity, FragmentsSharedElementsCallbackActivity::class.java))
             }
         }
     }
