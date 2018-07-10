@@ -19,8 +19,8 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
     override fun provideLayoutIdSceneB() = R.layout.layout_explode_base_scene_b
 
     override fun provideTransition(): Transition {
-        return getExplodeForWholeLayout()
-//        return getExplodeForEveryChildViewWithEpicenterCallback()
+//        return getExplodeForWholeLayout()
+        return getExplodeForEveryChildViewWithEpicenterCallback()
     }
 
     private fun getExplodeForWholeLayout() = Explode()
@@ -46,7 +46,7 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
 
     private fun getExplodeForEveryChildViewWithEpicenterCallback() = TransitionSet().apply {
         // smart way
-        val explode = Explode()
+        val explode = Explode() // .apply { addTarget(FrameLayout::class.java) }
         explode.epicenterCallback = createEpicenterCallback()
 
         addTransition(explode)
@@ -54,7 +54,7 @@ class ExplodeOverviewActivity : AbsTransitionBaseActivity() {
         //.addTarget(FrameLayout::class.java)
 
         // we won't use no smart ways!
-        if (true) return@apply
+//        if (true) return@apply
 
         // no smart way)
         val epicenterCallback = createEpicenterCallback()

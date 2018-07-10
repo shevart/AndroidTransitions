@@ -1,4 +1,4 @@
-package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.helper
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.helper
 
 data class FragmentSharedElementsTransition(
         val screenTransitionName: String,

@@ -1,7 +1,8 @@
-package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.helper
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.helper
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.SharedElementCallback
+import android.util.Log
 import android.view.View
 
 @Suppress("unused")
@@ -40,7 +41,22 @@ class SharedElementsFragmentsHelper {
                 fragmentTo.setEnterSharedElementCallback(null)
             }
         }
+        val returnCallback = object : SharedElementCallback() {
+            override fun onMapSharedElements(names: MutableList<String>?, sharedElements: MutableMap<String, View>?) {
+                super.onMapSharedElements(names, sharedElements)
+                Log.e("T", names?.joinToString() ?: "no names")
+            }
+
+            override fun onSharedElementEnd(sharedElementNames: MutableList<String>?, sharedElements: MutableList<View>?, sharedElementSnapshots: MutableList<View>?) {
+                super.onSharedElementEnd(sharedElementNames, sharedElements, sharedElementSnapshots)
+                Log.e("T", sharedElementNames?.joinToString() ?: "no names")
+            }
+        }
         fragmentTo.setEnterSharedElementCallback(enterCallback)
+        fragmentTo.setExitSharedElementCallback(returnCallback)
+
+        // ???
+        fragmentFrom.setEnterSharedElementCallback(returnCallback)
 
         return true
     }

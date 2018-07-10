@@ -110,7 +110,13 @@
             android:name=".specialcases.screentriangle.middlescreen.MiddleScreensHostActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".transition.overview.custom.ChangeIconImageTransitionActivity" />
-        <activity android:name=".screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity"></activity>
+        <activity android:name=".screenstransition.sharedelements.sharedelementscallbackvalidator.FragmentsSharedElementsCallbackValidatorActivity" />
+        <activity android:name=".advanced.clean.code.CleanCodeTransitionActivity" />
+        <activity android:name=".advanced.clean.code.delegates.CleanCodeDelegateTransitionActivity" />
+        <activity android:name=".advanced.mvpandmvvmpatterns.mvp.MvpTransitionSampleActivity" />
+        <activity android:name=".screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity" />
+        <activity android:name=".advanced.polish.PolishStartActivity" />
+        <activity android:name=".advanced.polish.PolishFinishActivity"></activity>
     </application>
 
 </manifest>

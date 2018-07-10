@@ -8,10 +8,13 @@ import android.transition.ChangeBounds
 import android.transition.Fade
 import android.transition.PatternPathMotion
 import android.view.Window
+import android.widget.Button
+import android.widget.FrameLayout
 import androidx.core.view.doOnPreDraw
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
+import com.shevart.androidtransitions.util.createDevLogSharedElementCallback
 import com.shevart.androidtransitions.util.imageViewTransitionName
 import kotlinx.android.synthetic.main.layout_detail_screen.*
 
@@ -33,6 +36,10 @@ class SharedElementsBActivity : AbsActivity() {
         ivDetailScreenImage.doOnPreDraw {
             startPostponedEnterTransition()
         }
+
+        // todo remove after test
+        setEnterSharedElementCallback(createDevLogSharedElementCallback("Enter", "ScreenB"))
+        setExitSharedElementCallback(createDevLogSharedElementCallback("Exit", "ScreenB"))
     }
 
     private fun initToolbar() {

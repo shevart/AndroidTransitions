@@ -13,6 +13,7 @@ import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.common.SimpleItem
 import com.shevart.androidtransitions.screenstransition.sharedelements.SharedElementsSimpleIItemAdapter
+import com.shevart.androidtransitions.util.createDevLogSharedElementCallback
 import com.shevart.androidtransitions.util.nextSimpleItemsList
 import kotlinx.android.synthetic.main.activity_shared_elements_a.*
 
@@ -29,6 +30,11 @@ class SharedElementsAActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.
         adapter.onItemViewClickListener = this
         rvSimpleItemsScreenA.layoutManager = LinearLayoutManager(this)
         rvSimpleItemsScreenA.adapter = adapter
+
+
+        // todo remove after test
+        setEnterSharedElementCallback(createDevLogSharedElementCallback("Enter", "ScreenA"))
+        setExitSharedElementCallback(createDevLogSharedElementCallback("Exit", "ScreenA"))
     }
 
     override fun onItemSelected(item: SimpleItem, view: View) {

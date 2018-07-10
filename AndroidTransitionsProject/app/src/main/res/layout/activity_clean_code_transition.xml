@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screenstransition.sharedelements.sharedelementscallbackvalidator.FragmentsSharedElementsCallbackValidatorActivity">
+    tools:context=".advanced.clean.code.CleanCodeTransitionActivity">
 
 </android.support.constraint.ConstraintLayout>

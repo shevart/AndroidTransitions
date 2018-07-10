@@ -1,4 +1,4 @@
-package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.helper
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.helper
 
 import android.support.transition.ChangeBounds
 import android.support.transition.TransitionSet

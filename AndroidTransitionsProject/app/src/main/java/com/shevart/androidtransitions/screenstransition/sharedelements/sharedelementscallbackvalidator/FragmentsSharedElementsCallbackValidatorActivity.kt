@@ -1,18 +1,26 @@
-package com.shevart.androidtransitions.screenstransition.sharedelements.fragments
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator
 
 import android.os.Bundle
 import android.support.transition.Fade
-import android.support.v4.app.SharedElementCallback
 import android.view.View
 import com.shevart.androidtransitions.R
 import com.shevart.androidtransitions.base.AbsActivity
+import com.shevart.androidtransitions.common.MockItemListDetailHost
 import com.shevart.androidtransitions.common.SimpleItem
 import com.shevart.androidtransitions.screenstransition.sharedelements.SharedElementsSimpleIItemAdapter
-import com.shevart.androidtransitions.util.createDevLogSharedElementCallback
+import com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.helper.SharedElementsFragmentsHelper
 import com.shevart.androidtransitions.util.nextSimpleItemsList
 
-class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItemAdapter.OnItemViewClickListener {
+class FragmentsSharedElementsCallbackValidatorActivity : AbsActivity(),
+        MockItemListDetailHost {
     private val items: List<SimpleItem> by lazy { nextSimpleItemsList() }
+    private val validator = SharedElementsFragmentsHelper()
+
+    override fun provideItems() = items
+
+    override fun onItemSelected(item: SimpleItem, view: View) {
+        openDetailScreen(item, view)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +32,16 @@ class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItem
         }
     }
 
-    override fun onItemSelected(item: SimpleItem, view: View) {
-        val fragment = SharedElementBFragment.getInstance(item)
+    private fun openDetailScreen(item: SimpleItem, view: View) {
+        val fragment = SecvBFragment.getInstance(item)
         fragment.enterTransition = Fade()
         fragment.enterTransition = Fade().apply { duration = 100L }
 
-        // todo remove after test!
-        val prevFragment = supportFragmentManager.findFragmentById(R.id.flFragmentsContainer)
-        prevFragment?.setEnterSharedElementCallback(createDevLogSharedElementCallback("Enter", "ScreenA"))
-        prevFragment?.setExitSharedElementCallback(createDevLogSharedElementCallback("Exit", "ScreenA"))
-
-        fragment.setEnterSharedElementCallback(createDevLogSharedElementCallback("Enter", "ScreenB"))
-        fragment.setExitSharedElementCallback(createDevLogSharedElementCallback("Exit", "ScreenB"))
-
+        val prevFragment = findCurrentFragment()!!
+        validator.validateSharedElementsScreenTransition(
+                screenTransitionName = "A-to-B",
+                fragmentFrom = prevFragment,
+                fragmentTo = fragment)
 
         supportFragmentManager
                 .beginTransaction()
@@ -46,12 +51,11 @@ class FragmentsSharedElementsActivity : AbsActivity(), SharedElementsSimpleIItem
                 .commit()
     }
 
-    fun getMockItemsList() = items
-
     private fun startContent() {
         supportFragmentManager
                 .beginTransaction()
-                .add(R.id.flFragmentsContainer, SharedElementAFragment())
+                .add(R.id.flFragmentsContainer, SecvAFragment())
+                .setReorderingAllowed(true)
                 .commit()
     }
 

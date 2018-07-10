@@ -2,6 +2,7 @@ package com.shevart.androidtransitions
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
 import com.shevart.androidtransitions.base.AbsActivity
 import com.shevart.androidtransitions.scene.samples.bylayoutid.ContentByLayoutIdSceneSampleActivity
 import com.shevart.androidtransitions.scene.samples.enterexitaction.EnterAndExitActionSceneSampleActivity
@@ -13,6 +14,9 @@ class MainActivity : AbsActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.apply {
+            requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+        }
         setContentView(R.layout.activity_main)
 
         btScene.setOnClickListener {
@@ -43,6 +47,10 @@ class MainActivity : AbsActivity() {
         }
         btSpecialCases.setOnClickListener {
             Launcher.SpecialCases.triangleScreens(this)
+        }
+        btAdvanced.setOnClickListener {
+//            Launcher.Advanced.mvp(this)
+            Launcher.Advanced.polish(this)
         }
     }
 }

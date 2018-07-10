@@ -1,14 +1,17 @@
 package com.shevart.androidtransitions.util
 
 import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Intent
+import com.shevart.androidtransitions.advanced.mvpandmvvmpatterns.mvp.MvpTransitionSampleActivity
+import com.shevart.androidtransitions.advanced.polish.PolishStartActivity
 import com.shevart.androidtransitions.screenstransition.ScreenTransitionsTopicActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.bytheme.ContentTransitionByThemeScreenAActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.activity.programmatically.FirstContentProgrammaticallyActivity
 import com.shevart.androidtransitions.screenstransition.screencontents.fragments.FragmentsScreenContentTransitionActivity
 import com.shevart.androidtransitions.screenstransition.sharedelements.activity.SharedElementsAActivity
 import com.shevart.androidtransitions.screenstransition.sharedelements.fragments.FragmentsSharedElementsActivity
-import com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity
+import com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.FragmentsSharedElementsCallbackValidatorActivity
 import com.shevart.androidtransitions.specialcases.screentriangle.ScreenTriangleStartActivity
 import com.shevart.androidtransitions.transition.overview.base.*
 import com.shevart.androidtransitions.transition.overview.custom.ChangeIconImageTransitionActivity
@@ -103,7 +106,7 @@ object Launcher {
             }
 
             fun sharedElementsCallback(activity: Activity) {
-                activity.startActivity(Intent(activity, FragmentsSharedElementsCallbackActivity::class.java))
+                activity.startActivity(Intent(activity, FragmentsSharedElementsCallbackValidatorActivity::class.java))
             }
         }
     }
@@ -111,6 +114,18 @@ object Launcher {
     object SpecialCases {
         fun triangleScreens(activity: Activity) {
             activity.startActivity(Intent(activity, ScreenTriangleStartActivity::class.java))
+        }
+    }
+
+    object Advanced {
+        fun mvp(activity: Activity) {
+            activity.startActivity(Intent(activity, MvpTransitionSampleActivity::class.java),
+                    ActivityOptions.makeSceneTransitionAnimation(activity).toBundle())
+        }
+
+        fun polish(activity: Activity) {
+            activity.startActivity(Intent(activity, PolishStartActivity::class.java),
+                    ActivityOptions.makeSceneTransitionAnimation(activity).toBundle())
         }
     }
 }

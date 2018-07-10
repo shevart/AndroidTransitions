@@ -1,0 +1,3 @@
+package com.shevart.androidtransitions.screenstransition.sharedelements.sharedelementscallbackvalidator.helper
+
+data class FragmentSharedElementsTransitionRecord(val viewNames: Set<String>)

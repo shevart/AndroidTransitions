@@ -40,4 +40,8 @@
     <string name="fragment_b">Fragment B</string>
     <string name="shared_element_triangle">shared_element_triangle</string>
     <string name="shared_element_triangle_2">shared_element_triangle_2</string>
+    <string name="sample_root_transition_name">sample_root_transition_name</string>
+    <string name="read_the_best_books">Read the best books!</string>
+    <string name="books">Books</string>
+    <string name="search_books">Search books</string>
 </resources>

@@ -60,4 +60,14 @@
         app:layout_constraintStart_toStartOf="@+id/btScreenTransitions"
         app:layout_constraintTop_toBottomOf="@+id/btScreenTransitions" />
 
+    <Button
+        android:id="@+id/btAdvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Advanced"
+        app:layout_constraintEnd_toEndOf="@+id/btSpecialCases"
+        app:layout_constraintStart_toStartOf="@+id/btSpecialCases"
+        app:layout_constraintTop_toBottomOf="@+id/btSpecialCases" />
+
 </android.support.constraint.ConstraintLayout>
