@@ -50,7 +50,6 @@ class PolishStartActivity : AbsActivity() {
                 addTransition(Slide(Gravity.TOP).addTarget(R.id.tvBooksTitle))
                 addTransition(Slide(Gravity.TOP).addTarget(R.id.tvBooksDescription))
                 addTransition(Fade().addTarget(R.id.cvSearchBox))
-                ordering = TransitionSet.ORDERING_SEQUENTIAL
                 duration = 300L
             }
         }

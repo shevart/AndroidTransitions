@@ -25,7 +25,9 @@ class PolishFinishActivity : AbsActivity() {
 
             sharedElementEnterTransition = TransitionInflater
                     .from(this@PolishFinishActivity)
-                    .inflateTransition(android.R.transition.move)
+                    .inflateTransition(android.R.transition.move).apply {
+                        duration = 300L
+                    }
         }
     }
 }
