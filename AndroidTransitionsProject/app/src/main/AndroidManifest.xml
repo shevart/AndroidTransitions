@@ -116,7 +116,9 @@
         <activity android:name=".advanced.mvpandmvvmpatterns.mvp.MvpTransitionSampleActivity" />
         <activity android:name=".screenstransition.sharedelements.sharedelementscallback.FragmentsSharedElementsCallbackActivity" />
         <activity android:name=".advanced.polish.PolishStartActivity" />
-        <activity android:name=".advanced.polish.PolishFinishActivity"></activity>
+        <activity android:name=".advanced.polish.PolishFinishActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>
